@@ -25,4 +25,9 @@ $aws = Aws::factory(
 $client = $aws->get('DynamoDb');
 
 /** @var \Aws\DynamoDb\DynamoDbClient $client */
-echo $client->listTables() . "\n";
+$result = $client->listTables();
+
+// TableNames contains an array of table names
+foreach ($result['TableNames'] as $tableName) {
+    echo "- " . $tableName . "\n";
+}
