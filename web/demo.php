@@ -11,6 +11,8 @@ $instance_metadata = \Aws\Common\InstanceMetadata\InstanceMetadataClient::factor
     ->send()
     ->json();
 
+echo $instance_metadata['instanceId'] . "\n";
+
 $instance_region = $instance_metadata['region'];
 echo $instance_region . "\n";
 
