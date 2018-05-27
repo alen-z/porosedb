@@ -1,0 +1,1 @@
+aws dynamodb json sdk https://docs.aws.amazon.com/aws-sdk-php/v2/guide/configuration.html
