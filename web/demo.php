@@ -4,6 +4,8 @@ require 'vendor/autoload.php';
 
 use Aws\Common\Aws;
 
+echo date("c") . "\n";
+
 $instance_metadata = \Aws\Common\InstanceMetadata\InstanceMetadataClient::factory()
     ->get('dynamic/instance-identity/document')
     ->send()
@@ -23,4 +25,4 @@ $aws = Aws::factory(
 $client = $aws->get('DynamoDb');
 
 /** @var \Aws\DynamoDb\DynamoDbClient $client */
-var_dump($client->listTables());
+echo $client->listTables() . "\n";
