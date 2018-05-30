@@ -42,3 +42,6 @@ overall progress: 3 out of 10 tasks
 9/10: running   [==================================================>] 
 10/10: no suitable node (host-mode port already in use on 3 nodes; 2 nodes not av… 
 ```
+- `Manage Stream` should be enabled for DynamoDB.
+- Deleting empty table while 0.5 listing tables takes a long time when 3/2 regions are involved and deletes only in 1 selected region!
+- DynamoDB deletes quickly if Global Table is empty, Manage Stream disabled and unchecked CloudWatch alarm removal when deleting.
